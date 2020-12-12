@@ -105,8 +105,18 @@ const getTasksByProject = async (request, response) => {
   } = request.params;
 
   try {
-    
+    const tasks = await Task.findAll({ where: { project_id: id }});
 
+    if (!tasks) {
+      return response
+        .status(404)
+        .json({
+        message: 'Not Found.'
+      });
+    }
+
+    return response.json({ tasks });
+    
   } catch (error) {
 
     return response
