@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/index.js --exec babel-node",
-    "build": "babel src --out-dir dist",
-    "start-prod": "node dist/index.js"
+    "build": "babel src --out-dir dist"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
