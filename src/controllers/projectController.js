@@ -42,7 +42,7 @@ const getAllProjects = async (request, response) => {
       return response
         .status(404)
         .json({
-        message: 'Not Found.'
+        message: 'Nothing found.'
       });
     }
 
@@ -133,7 +133,7 @@ const updateProject = async (request, response) => {
       return response
         .status(404)
         .json({
-        message: 'Such project does not exist in our records..'
+        message: 'Such project does not exist in our records.'
       });
     }
 
@@ -147,6 +147,7 @@ const updateProject = async (request, response) => {
     return response.json({ project: updatedProject });
 
   } catch (error) {
+
     return response
       .status(500)
       .json({

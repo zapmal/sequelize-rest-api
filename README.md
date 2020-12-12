@@ -1,5 +1,5 @@
 # Sequelize REST API
 
-# Scripts
+## Scripts
 
 Todo
